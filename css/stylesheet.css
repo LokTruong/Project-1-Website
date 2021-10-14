@@ -1,0 +1,132 @@
+nav, header, footer {
+  border-radius: 1em;
+}
+
+nav {
+  width: 100vw;
+}
+
+header {
+  position: fixed;
+  background-color: #FAF7A5;
+}
+
+section {
+  height: 85vh;
+  overflow-y: scroll;
+  padding: 100em;
+  background-image: url("/images/joshua-hoehne-unsplash.jpg");
+}
+
+@keyframes expandBounce {
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expandBounceReverse {
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+}
+
+footer {
+  position:absolute;
+  bottom:0;
+  width: 100vw;
+  background-color: #FAF7A5;
+  /* transform:translateY(5vh); */
+}
+
+.nav-top {
+    background-color:#FAF7A5;
+    z-index: 1;
+}
+
+nav svg {
+  display: block;
+  margin: auto;
+  animation: expandBounce 2s ease;
+  animation-iteration-count: 3;
+}
+
+.nav-bottom svg {
+  animation: expandBounceReverse 2s ease;
+  animation-iteration-count: 3;
+  z-index: 1;
+}
+
+body {
+  background-color: #FAF7A5;
+}
+
+header {
+  text-align: center;
+  margin-top: 0;
+  padding: 1em;
+  z-index: 2;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: #B88CFA;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  border: none;
+  border-radius: 0.5em;
+  transition: 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px #7550AD;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Placeholder for masonry.js framework; Delete later */
+
+section {
+  padding: 15em;
+  text-align: center;
+  width: 100vw;
+  margin:0;
+  color:white;
+  /* Except this v */
+  background-image: url("/images/joshua-hoehne-unsplash.jpg");
+}
