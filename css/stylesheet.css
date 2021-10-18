@@ -12,12 +12,15 @@
   background-color: white;
   margin:1em;
   overflow: hidden;
-  border: none;
+  border:none;
+  outline: 5px dashed black;
+
 }
 
 p {
   color:black;
-  margin:0.5em;
+  margin:1em;
+  padding-top:1em;
 }
 
 .grid--pic {
@@ -42,6 +45,7 @@ p {
   background-attachment: local;
   transform:translateY(-7vh);
   z-index: 1;
+  padding-left: 1vw;
 }
 
  .grid {
@@ -66,8 +70,18 @@ p {
 }
 
 header, footer {
-  border-radius: 1em;
+  /* border-radius: 1em; */
   z-index: 1;
+}
+
+header {
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+footer {
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
 }
 
 nav {
@@ -76,7 +90,7 @@ nav {
 
 header {
   position: absolute;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(0, 0, 0, 0.75);
 }
 
 header, header p {
@@ -133,7 +147,7 @@ footer {
   position:absolute;
   bottom:0;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .nav-bottom, header, footer {
@@ -219,6 +233,13 @@ button:active {
   box-shadow: none;
 }
 
+footer ul {
+  display:flex;
+  justify-content: center;
+  gap:7vw;
+  padding:0;
+}
+
 /* Placeholder for masonry.js framework; Delete later */
 
 section {
@@ -234,10 +255,9 @@ section {
   color:white;
   width:8em;
   transform:translate(40vw);
-  /* text-shadow: 4px 4px white; */
 }
 
-.picture-gallery {
+.personal-story {
   background-color: #60d7a9;
 }
 
@@ -255,11 +275,8 @@ section {
   display:none;
 }
 
-footer ul {
-  display:flex;
-  justify-content: center;
-  gap:7vw;
-  padding:0;
+#personal-story--text, #personal-story--images, #personal-story--both {
+  display:none;
 }
 
  /* Ripped from CSS-tricks */
