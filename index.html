@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>First Mockup</title>
 
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="/https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="/src/script.js"></script>
 
     <link rel="stylesheet" href="/css/masonry-docs.css" />
@@ -57,7 +57,7 @@
     <footer>
       <ul>
         <li id="main-buttons">
-          <button onclick="window.location.href = '#'">Add your Story</button>
+          <button id="story-popup">Add your Story</button>
         </li>
         <li>
             <button id="click-overview">Home</button>
@@ -76,38 +76,100 @@
 
   </main>
 
-
-
     <!--  Website content: sections and other stuff -->
+
+  <!-- Add Your Story -->
+  <section class="personal-story">
+    <form>
+      <label type="checkbox" name="anon" >Post Anonymously</label><br>
+      <input for="anon" type="checkbox">
+
+      <label>First Name</label>
+      <input type="text" placeholder="Your name..">
+  
+      <label>Last Name</label>
+      <input type="text" placeholder="Your last name..">
+  
+      <label>Country</label>
+      <select name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+    
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
   <!-- Overview -->
   <section class="overview"> 
-    Mix of Gallery and Quotes
+
+    <div class="grid">
+      <h1>Home</h1>
+      <div class="grid-item grid--home">
+        <img width="400px" height="200px" src="https://ychef.files.bbci.co.uk/976x549/p09lw34h.jpg"></img>
+        <p>Something to say, but not sure what to write.</p>
+      </div>
+      <div class="grid-item grid-item--width grid--home" style="height: 300px;">
+        <img width="500px" height="300px" src="https://www.eastbaytimes.com/wp-content/uploads/2017/01/pie-murals-0106-021.jpg?w=703"></img>
+      </div>
+      <div class="grid-item grid--home" style="width: 500px; height:300px;">
+        <img width="500px" height="300px" src="https://theculturetrip.com/wp-content/uploads/2018/03/11226830656_2aeb80c83a_k.jpg"></img>
+      </div>
+      <div class="grid-item grid--home" style="height:460px;">
+        <p class="grid--quote">One of the reasons that so many people of color and poor people are in prison is that the deindustrialization of the economy has led to the creation of new economies and the expansion of some old ones – I have already mentioned the drug trade and the market for sexual services. At the same time, though, there are any number of communities that more than welcome prisons as a source of employment. Communities even compete with one another to be the site where new prisons will be constructed because prisons create a significant number of relatively good jobs for their residents” <b>— Angela Davis</b></p>
+      </div>
+      <div class="grid-item grid--home" style="height:600px;">
+
+      </div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+      <div class="grid-item grid--home"></div>
+    </div>
   </section>
 
   <!-- Picture Gallery -->
   <section class="picture-gallery"> 
-    Grid
+
+    <div class="grid">
+      <h1>Picture Gallery</h1>
+      <div class="grid-item grid--pic"></div>
+      <div class="grid-item grid--pic"></div>
+      <div class="grid-item grid--pic"></div>
+    </div>
   </section>
 
   <!-- Stories -->
   <section class="stories">
-    <p>
+
       <h1>Stories</h1>
-    </p>
+
     <ul>
       <li>
         <blockquote>
-          <p>Paragraph here.</p>
+          <p>One of the reasons that so many people of color and poor people are in prison is that the deindustrialization of the economy has led to the creation of new economies and the expansion of some old ones – I have already mentioned the drug trade and the market for sexual services. At the same time, though, there are any number of communities that more than welcome prisons as a source of employment. Communities even compete with one another to be the site where new prisons will be constructed because prisons create a significant number of relatively good jobs for their residents”
+            <b>— Angela Davis</b> </p>
         </blockquote>
       </li>
       <li>
         <blockquote>
-          <p>Paragraph here.</p>
+          <p>“I am not free while any woman is unfree, even when her shackles are very different from my own. And I am not free as long as one person of Color remains chained.”
+            <b>― Audre Lorde</b></p>
         </blockquote>
       </li>
       <li>
         <blockquote>
-          <p>Paragraph here.</p>
+          <p>We like to filter new information through our own experiences to see if it computes. If it matches up with what we have experiences, it's valid. If it doesn't match up, it's not. But race is not a universal experience. If you are white, there is a good chance you may have been poor at some point in your life, you may have been sick, you may have been discriminated against for being fat or being disabled or being short or being conventionally unattractive, you may have been many things—but you have not been a person of color. So, when a person of color comes to you and says "this is different for me because I'm not white," when you run the situation through your own lived experience, it often won't compute. This is usually where the desire to dismiss claims of racial oppression come from—it just doesn't make sense to you so it cannot be right.
+            But if you are white, and you are feeling this way, I ask you this: is your lived experience real? Are the situations you've lived through real? Are your interpretations of those situations valid?...So if your lived experience and your interpretation of that lived experience are valid, why wouldn't the lived experience of people of color be just as valid? If I don't have the right to deem your life, what you see and hear and feel, a lie, why do you have the right to do that to me? Why do you deserve to be believed and people of color don't?”
+            <b>― Ijeoma Oluo</b></p>
         </blockquote>
       </li>
     </ul>
@@ -115,6 +177,8 @@
 
   <!-- Reflection -->
   <section class="reflection">
+
+    <h1>Reflection</h1>
 
     <h2>I relate to…</h2>
       <textarea type="text" rows="15" cols="70"></textarea>
@@ -147,35 +211,42 @@
         );
 
         // Bottom Footer
-        $(".nav-bottom, footer, footer ul").click(
+        $(".nav-bottom, footer").hover( 
           function() {
-            $("footer").stop(true).slideToggle("medium");
-        }).children().click(function(e) {
-          e.stopPropagation();
+            $("footer").stop(true).slideDown("medium");
+          }, function() {
+            $("footer").stop(true).slideUp("medium");
         });
 
         // Button Functionality
 
         function heroOverview() {
           $(".overview").css("display","block");
-          $(".reflection, .picture-gallery, .stories").css("display","none");
+          $(".reflection, .picture-gallery, .stories, .personal-story").css("display","none");
         }
         function heroReflection() {
           $(".reflection").css("display","block");
-          $(".overview, .picture-gallery, .stories").css("display","none");
+          $(".overview, .picture-gallery, .stories, .personal-story").css("display","none");
         }
         function heroStories() {
           $(".stories").css("display","block");
-          $(".overview, .picture-gallery, .reflection").css("display","none");
+          $(".overview, .picture-gallery, .reflection, .personal-story").css("display","none");
         }
         function heroPictureGallery() {
           $(".picture-gallery").css("display","block");
-          $(".overview, .reflection, .stories").css("display","none");
+          $(".overview, .reflection, .stories, .personal-story").css("display","none");
         }
+        function heroAddStory() {
+          $(".personal-story").css("display","block");
+          $(".overview, .reflection, .stories, .picture-gallery").css("display","none");
+        }
+
+        // Listeners for Buttons
         document.getElementById("click-overview").addEventListener("click", heroOverview);
         document.getElementById("click-reflection").addEventListener("click", heroReflection);
         document.getElementById("click-stories").addEventListener("click", heroStories);
         document.getElementById("click-picture-gallery").addEventListener("click", heroPictureGallery);
+        document.getElementById("story-popup").addEventListener("click", heroAddStory);
 
       });
     </script>

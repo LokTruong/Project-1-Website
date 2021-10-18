@@ -1,11 +1,73 @@
+/* Responsive Behavior */
+
+@media (min-width: 410px) {
+  footer ul {
+    gap:1vw;
+  }
+}
+
+.grid-item { 
+  width: 400px; 
+  height: 400px; 
+  background-color: white;
+  margin:1em;
+  overflow: hidden;
+  border: none;
+}
+
+p {
+  color:black;
+  margin:0.5em;
+}
+
+.grid--pic {
+  margin:1vw;
+}
+
+.picture-gallery h1, .overview h1 {
+  top:1;
+}
+
+.grid {
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  top:48px;
+  left:0;
+  border-radius: 0;
+  /* background-color: transparent; */
+  overflow: scroll;
+  z-index: 0;
+  background: url("https://folklife.si.edu/Media/Default/Talk%20Story/Tindall_Underground-Railroad-quilt.jpg");
+  background-attachment: local;
+  transform:translateY(-7vh);
+  z-index: 1;
+}
+
+ .grid {
+  box-shadow:inset 0 0 200em #000000;
+}
+
+.overview .picture-gallery {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
 
 
 .reflection button {
   margin-top:5vh;
 }
 
-nav, header, footer {
+header, footer {
   border-radius: 1em;
+  z-index: 1;
 }
 
 nav {
@@ -13,18 +75,22 @@ nav {
 }
 
 header {
-  position: fixed;
-  background-color: #FAF7A5;
+  position: absolute;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+header, header p {
+  color:white;
 }
 
 section {
-  height: 85vh;
+  height: 100vh;
   overflow-y: scroll;
   padding: 100em;
 }
 
-html {
-  background-image: url("/images/joshua-hoehne-unsplash.jpg");
+li {
+  list-style-type: none;
 }
 
 @keyframes expandBounce {
@@ -67,18 +133,23 @@ footer {
   position:absolute;
   bottom:0;
   width: 100vw;
-  background-color: #FAF7A5;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-bottom, header, footer {
+  z-index: 2;
 }
 
 .nav-top {
-    background-color:#FAF7A5;
-    z-index: 1;
+    background-color:transparent;
+    position:fixed;
+    z-index: 5;
 }
 
 .nav-bottom {
-  position:absolute;
+  position:fixed;
   bottom:0;
-  background-color: #FAF7A5;
+  background-color: transparent;
 }
 
 nav svg {
@@ -157,14 +228,30 @@ section {
   margin:0;
   color:white;
   /* Except this v */
-  background-image: url("/images/joshua-hoehne-unsplash.jpg");
 }
 
+.overview h1, .picture-gallery h1 {
+  color:white;
+  width:8em;
+  transform:translate(40vw);
+  /* text-shadow: 4px 4px white; */
+}
 
+.picture-gallery {
+  background-color: #60d7a9;
+}
+
+.reflection {
+  background-color: #fdc162;
+}
+
+.stories {
+  background-color: #f68dbb;
+}
 
 /* vvv 🚨 Testing playground for isolating sections: DELETE LATER 🚨 vvv */
 
-.picture-gallery, .stories, .reflection {
+.picture-gallery, .stories, .reflection, .personal-story {
   display:none;
 }
 
@@ -173,5 +260,33 @@ footer ul {
   justify-content: center;
   gap:7vw;
   padding:0;
+}
 
+ /* Ripped from CSS-tricks */
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  color:black;
+}
+
+.grid--quote p{
+  margin: 1em;
+}
+
+form {
+  color:black;
 }
