@@ -1,8 +1,28 @@
-/* Responsive Behavior */
+/* Last minute responsive behavior */
 
-@media (min-width: 410px) {
+/* Mobile */
+@media screen and (max-width:767px) {
+  ul {
+    transform:translateX(-55vw);
+  }
+  section ul li blockquote {
+    width:80vw;
+  }
   footer ul {
-    gap:1vw;
+    overflow:scroll;
+    transform:translateX(0vw);
+    white-space: nowrap;
+  }
+  html {
+    position: fixed;
+  }
+  section textarea {
+    width:80vw;
+    transform:translateX(-45vw);
+  }
+  section h2 {
+    transform:translateX(-7em);
+    text-align:left;
   }
 }
 
