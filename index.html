@@ -323,24 +323,27 @@
 
         // 'Add Your Story' dropdown
         const dropdownValue = document.querySelector("#dropdown")
+        const dropdownImages = document.querySelector("#personal-story--images")
+        const dropdownText = document.querySelector("#personal-story--text")
+        const dropdownBoth = document.querySelector("#personal-story--both")
 
         function dropdownMenu() {
           if (dropdownValue.value == "images") {
-          document.querySelector("#personal-story--images").style.display = "block";
-          document.querySelector("#personal-story--text").style.display = "none";
-          document.querySelector("#personal-story--both").style.display = "none";
+            dropdownImages.style.display = "block";
+            dropdownText.style.display = "none";
+            dropdownBoth.style.display = "none";
         } else if (dropdownValue.value == "text") {
-            document.querySelector("#personal-story--text").style.display = "block";
-            document.querySelector("#personal-story--images").style.display = "none";
-            document.querySelector("#personal-story--both").style.display = "none";
+          dropdownText.style.display = "block";
+            dropdownImages.style.display = "none";
+            dropdownBoth.style.display = "none";
           } else if (dropdownValue.value == "both") {
-            document.querySelector("#personal-story--both").style.display = "block";
-            document.querySelector("#personal-story--text").style.display = "none";
-            document.querySelector("#personal-story--images").style.display = "none";
+            dropdownBoth.style.display = "block";
+            dropdownText.style.display = "none";
+            dropdownImages.style.display = "none";
           } else if (dropdownValue.value == "empty") {
-            document.querySelector("#personal-story--both").style.display = "none";
-            document.querySelector("#personal-story--text").style.display = "none";
-            document.querySelector("#personal-story--images").style.display = "none";
+            dropdownBoth.style.display = "none";
+            dropdownText.style.display = "none";
+            dropdownImages.style.display = "none";
           }
 
         }
